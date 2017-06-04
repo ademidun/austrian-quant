@@ -1,0 +1,5 @@
+2011-01-04 10:30 DEPRECATION WARNING Line 68: The `history` method is deprecated.  Use `data.history` instead.  Learn more here.  
+2011-01-04 10:30 DEPRECATION WARNING Line 74: `data[sid(N)]` is deprecated. Use `data.current`.  Learn more here.  
+2011-01-04 10:30 DEPRECATION WARNING Line 74: The `mavg` method is deprecated.  Learn more here.  
+2011-01-04 10:30 DEPRECATION WARNING Line 75: `data[sid(N)]` is deprecated. Use `data.current`.  Learn more here.  
+2011-01-04 10:30 DEPRECATION WARNING Line 75: The `mavg` method is deprecated.  Learn more here.  
