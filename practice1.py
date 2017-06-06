@@ -6,7 +6,6 @@ from sklearn import datasets
 from sklearn import svm
 
 digits = datasets.load_digits()
-
 print('digits.data ', digits.data)
 print('digits.target ', digits.target)
 # apparently setting gamma and data values yield, better results than being left blank
