@@ -26,7 +26,7 @@ print('prediction 1:', clf.predict(X[0])[0])
 print('prediction 2:', clf.predict([0.58,0.76]))
 
 w = clf.coef_[0]
-print('w: ',w)
+print('w: ', w)
 
 a = -w[0] / w[1]
 

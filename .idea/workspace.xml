@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b4a3351-09bf-4fa7-8c56-3d608265edc3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/example1.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my_utils.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/practice1.py" afterPath="$PROJECT_DIR$/practice1.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example1.py" afterPath="$PROJECT_DIR$/example1.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my_utils.py" afterPath="$PROJECT_DIR$/my_utils.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quant1.py" afterPath="$PROJECT_DIR$/quant1.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,6 +16,35 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/austrian_quant$quant1.coverage" NAME="quant1 Coverage Results" MODIFIED="1496636905993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="DockManager">
+    <window id="2">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="quant1.py" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/quant1.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="253">
+                    <caret line="81" column="90" lean-forward="false" selection-start-line="81" selection-start-column="80" selection-end-line="81" selection-end-column="90" />
+                    <folding>
+                      <element signature="e#0#11#0" expanded="true" />
+                      <element signature="e#5671#8855#0" expanded="false" />
+                      <element signature="e#9544#9951#0" expanded="false" />
+                      <element signature="e#9974#10333#0" expanded="false" />
+                      <element signature="e#10519#10924#0" expanded="false" />
+                      <element signature="e#10948#12124#0" expanded="false" />
+                      <element signature="e#12126#12434#1" expanded="false" />
+                      <element signature="e#12436#12689#1" expanded="false" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
@@ -35,8 +62,8 @@
       <file leaf-file-name="example1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/example1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+            <state relative-caret-position="60">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -44,18 +71,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="quant1.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/quant1.py">
+      <file leaf-file-name="quant2.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/quant2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="297" column="0" lean-forward="true" selection-start-line="297" selection-start-column="0" selection-end-line="297" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
               <folding>
-                <element signature="e#0#23#0" expanded="true" />
-                <element signature="e#418#1594#0" expanded="false" />
-                <element signature="e#1597#1905#1" expanded="false" />
-                <element signature="e#1907#2160#1" expanded="false" />
-                <element signature="e#7220#10404#0" expanded="false" />
+                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#2179#3087#0" expanded="false" />
+                <element signature="e#12017#12760#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data_mixin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/env/lib/python3.6/site-packages/quandl/model/data_mixin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my_keys.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my_keys.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -73,11 +118,11 @@
       <file leaf-file-name="my_utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="348">
+              <caret line="89" column="42" lean-forward="false" selection-start-line="89" selection-start-column="42" selection-end-line="89" selection-end-column="42" />
               <folding>
-                <element signature="e#13#1450#0" expanded="false" />
                 <element signature="e#1464#3617#0" expanded="false" />
+                <element signature="e#5891#6963#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -95,6 +140,16 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>print(</find>
+      <find>re</find>
+      <find>fapsd</find>
+      <find>%Y-%m-%d</find>
+      <find>n/a</find>
+      <find>close</find>
+      <find>adj</find>
+      <find>sleep</find>
+      <find>strf</find>
+      <find>print</find>
+      <find>n/a</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -106,9 +161,11 @@
         <option value="$PROJECT_DIR$/my-utils.py" />
         <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/practice1.py" />
+        <option value="$PROJECT_DIR$/my_keys.py" />
         <option value="$PROJECT_DIR$/example1.py" />
-        <option value="$PROJECT_DIR$/my_utils.py" />
         <option value="$PROJECT_DIR$/quant1.py" />
+        <option value="$PROJECT_DIR$/my_utils.py" />
+        <option value="$PROJECT_DIR$/quant2.py" />
       </list>
     </option>
   </component>
@@ -119,10 +176,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="986" />
+    <option name="x" value="752" />
     <option name="y" value="23" />
-    <option name="width" value="934" />
-    <option name="height" value="1005" />
+    <option name="width" value="686" />
+    <option name="height" value="826" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -139,8 +196,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -161,6 +218,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="SearchEverywhereHistoryKey" value="quandl&#9;null&#9;null" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -377,6 +435,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="2b4a3351-09bf-4fa7-8c56-3d608265edc3" name="Default" comment="" />
@@ -388,20 +449,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="986" y="23" width="934" height="1005" extended-state="0" />
-    <editor active="true" />
+    <frame x="752" y="23" width="686" height="826" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21688034" sideWeight="0.5" order="11" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2681638" sideWeight="0.5" order="11" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40686923" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40686923" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -419,10 +479,66 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/practice1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/lib/python3.6/site-packages/sklearn/svm/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6915">
+          <caret line="482" column="8" lean-forward="false" selection-start-line="482" selection-start-column="8" selection-end-line="482" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#1464#3617#0" expanded="false" />
+            <element signature="e#5891#6963#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2985">
+          <caret line="285" column="42" lean-forward="false" selection-start-line="285" selection-start-column="42" selection-end-line="285" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#5671#8855#0" expanded="false" />
+            <element signature="e#9544#9951#0" expanded="false" />
+            <element signature="e#9974#10333#0" expanded="false" />
+            <element signature="e#10519#10924#0" expanded="false" />
+            <element signature="e#10948#12124#0" expanded="false" />
+            <element signature="e#12126#12434#1" expanded="false" />
+            <element signature="e#12436#12689#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/practice1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -460,11 +576,14 @@
         <state relative-caret-position="855">
           <caret line="86" column="27" lean-forward="true" selection-start-line="86" selection-start-column="27" selection-end-line="86" selection-end-column="27" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
-            <element signature="e#418#1594#0" expanded="false" />
-            <element signature="e#1597#1905#1" expanded="false" />
-            <element signature="e#1907#2160#1" expanded="false" />
-            <element signature="e#7220#10404#0" expanded="false" />
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#5671#8855#0" expanded="false" />
+            <element signature="e#9544#9951#0" expanded="false" />
+            <element signature="e#9974#10333#0" expanded="false" />
+            <element signature="e#10519#10924#0" expanded="false" />
+            <element signature="e#10948#12124#0" expanded="false" />
+            <element signature="e#12126#12434#1" expanded="false" />
+            <element signature="e#12436#12689#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -506,11 +625,14 @@
         <state relative-caret-position="210">
           <caret line="17" column="51" lean-forward="true" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
-            <element signature="e#418#1594#0" expanded="false" />
-            <element signature="e#1597#1905#1" expanded="false" />
-            <element signature="e#1907#2160#1" expanded="false" />
-            <element signature="e#7220#10404#0" expanded="false" />
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#5671#8855#0" expanded="false" />
+            <element signature="e#9544#9951#0" expanded="false" />
+            <element signature="e#9974#10333#0" expanded="false" />
+            <element signature="e#10519#10924#0" expanded="false" />
+            <element signature="e#10948#12124#0" expanded="false" />
+            <element signature="e#12126#12434#1" expanded="false" />
+            <element signature="e#12436#12689#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -539,19 +661,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.1/python_stubs/1158767940/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="5204" column="8" lean-forward="false" selection-start-line="5204" selection-start-column="8" selection-end-line="5204" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/robo-quant.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -567,36 +680,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.1/python_stubs/1158767940/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="4133" column="8" lean-forward="false" selection-start-line="4133" selection-start-column="8" selection-end-line="4133" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/practice1.py">
+    <entry file="file://$PROJECT_DIR$/env/lib/python3.6/site-packages/quandl/model/data_mixin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/example1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my_utils.py">
+    <entry file="file://$PROJECT_DIR$/my_keys.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="e#13#1450#0" expanded="false" />
-            <element signature="e#1464#3617#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -608,16 +715,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons/re.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="252" column="8" lean-forward="false" selection-start-line="252" selection-start-column="8" selection-end-line="252" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/quant1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="297" column="0" lean-forward="true" selection-start-line="297" selection-start-column="0" selection-end-line="297" selection-end-column="0" />
+        <state relative-caret-position="253">
+          <caret line="81" column="90" lean-forward="false" selection-start-line="81" selection-start-column="80" selection-end-line="81" selection-end-column="90" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
-            <element signature="e#418#1594#0" expanded="false" />
-            <element signature="e#1597#1905#1" expanded="false" />
-            <element signature="e#1907#2160#1" expanded="false" />
-            <element signature="e#7220#10404#0" expanded="false" />
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#5671#8855#0" expanded="false" />
+            <element signature="e#9544#9951#0" expanded="false" />
+            <element signature="e#9974#10333#0" expanded="false" />
+            <element signature="e#10519#10924#0" expanded="false" />
+            <element signature="e#10948#12124#0" expanded="false" />
+            <element signature="e#12126#12434#1" expanded="false" />
+            <element signature="e#12436#12689#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="89" column="42" lean-forward="false" selection-start-line="89" selection-start-column="42" selection-end-line="89" selection-end-column="42" />
+          <folding>
+            <element signature="e#1464#3617#0" expanded="false" />
+            <element signature="e#5891#6963#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#2179#3087#0" expanded="false" />
+            <element signature="e#12017#12760#0" expanded="false" />
           </folding>
         </state>
       </provider>

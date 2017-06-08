@@ -1,78 +1,31 @@
-from time import mktime
-import re
 import time
 from datetime import datetime
+from time import mktime
 
 import matplotlib as mpl
+import re
+
 mpl.use('TkAgg')
 import matplotlib.pyplot as plt
 import os
 import pandas as pd
 from matplotlib import style
-from my_utils import my_gather, my_df_cols
+from my_utils import my_gather, my_df_cols, FEATURES
+from my_keys import quandl_api_key
 import numpy as np
-from sklearn import svm
+from sklearn import svm, preprocessing
+import quandl
 style.use("ggplot")
-
 
 style.use('dark_background')
 
-
 path = "/Users/tomiwa/Downloads/intraQuarter"
 
+quandl.ApiConfig.api_key = quandl_api_key
 
-def debug_run():
-    gather = "Total Debt/Equity (mrq)"
-
-    statspath = path + '/_KeyStats'
-    print(os.walk(statspath))
-    # x is a tuple so foreach element x in os.walk(),
-    # take the first tuple element
-    stock_list = [x[0] for x in os.walk(statspath)]
-    print('stock_list: ', stock_list)
-
-    # file structure
-    # /Users/tomiwa/Downloads/intraQuarter
-    # |_ KeyStats
-    #     |_ aapl
-    #         |_ 20040130190102.html
-    for each_dir in stock_list[1:]:
-        each_file = os.listdir(each_dir)
-        ticker = each_dir.split("/")[1]
-        if len(each_file) > 0:
-            for file in each_file:
-                date_stamp = datetime.strptime(file, '%Y%m%d%H%M%S.html')
-                unix_time = time.mktime(date_stamp.timetuple())
-                print(date_stamp, unix_time)
-                full_file_path = each_dir + '/' + file
-                print('full_file_path: ', full_file_path)
-                source = open(full_file_path, 'r').read()
-                print('source: ', source)
-                value = source.split(gather + ':</td><td class="yfnc_tabledata1">')[1].split('</td>')[0]
-                print(ticker + ":", value)
-                time.sleep(15)
-
-
-'''
-Each directory in keystats is a stock ticker.
-Each stock ticker, has files with date time filename 
-in the format %Y%m%d%H%M%S.html' indicating when 
-the data was pulled
-We want to convert those file names into unix time stamps.
-
-This function is useful for teaching how to scrape data from a webpage
-'''
-
-'''
-1. Go through the HTMl of each stock at quarterly intervals and get their DE Ratio
-2. Get the s&p500 index csv, conver it to a datafram and match up the stock price on that day
-3. With the share price and DE Ratio for that stock on the given day
-'''
-
+data = quandl.Dataset("WIKI/KO" ).data(params={ 'start_date':'2001-12-01', 'end_date':'2010-12-30'})
 
 def Key_Stats(gather=my_gather):
-
-
     statspath = path + '/_KeyStats'
     stock_list = [x[0] for x in os.walk(statspath)]
     df = pd.DataFrame(columns=my_df_cols)
@@ -91,8 +44,8 @@ def Key_Stats(gather=my_gather):
         # print('ticker: ', ticker)
         starting_stock_value = False
         starting_sp500_value = False
-        if counter ==5:
-            print('ticker check: ',ticker)
+        if counter == 5:
+            print('ticker check: ', ticker)
             counter = 0
         if len(quarterly_files) > 0:
             for file in quarterly_files:
@@ -236,49 +189,75 @@ def Key_Stats(gather=my_gather):
 
                 except Exception as e:
                     pass
-        counter +=1
+        counter += 1
 
     for each_ticker in ticker_list:
-                try:
-                    plot_df = df[(df['Ticker'] == each_ticker)]
+        try:
+            plot_df = df[(df['Ticker'] == each_ticker)]
 
-                    plot_df = plot_df.set_index(['Date'])
+            plot_df = plot_df.set_index(['Date'])
 
-                    if plot_df['Status'][-1] == 'underperform':
-                        color = 'r'
-                    else:
-                        color = 'g'
+            if plot_df['Status'][-1] == 'underperform':
+                color = 'r'
+            else:
+                color = 'g'
 
-                    plot_df['Difference'].plot(label=each_ticker, color=color)
-                    plt.legend()
-                except Exception as e:
-                    print(str(e))
+            plot_df['Difference'].plot(label=each_ticker, color=color)
+            plt.legend()
+        except Exception as e:
+            print(str(e))
 
     plt.show()
-    df.to_csv("key_stats.csv")
-            # time.sleep(1)
+    df.to_csv("key_stats_jun7.csv")
+    # time.sleep(1)
 
-def Build_Data_Set(features =["DE Ratio", "Trailing P/E"]):
+
+def Build_Data_Set():
     ''' Convert a csv to a df with features and labels for ML training.'''
     data_df = pd.DataFrame.from_csv("key_stats.csv")
 
-    data_df = data_df[:100]
+    # data_df = data_df[:100]
+    data_df = Randomizing(data_df)
+    X = np.array(data_df[FEATURES].values)
 
-    X = np.array(data_df[features].values)
-
-    y= (data_df["Status"]
-        .replace("underperform",0)
-        .replace("outperform",1)
-        .values.tolist())
+    y = (data_df["Status"]
+         .replace("underperform", 0)
+         .replace("outperform", 1)
+         .values.tolist())
+    X = preprocessing.scale(X)
 
     return X, y
 
+
 def Analysis():
+    test_size = 330
 
     X, y = Build_Data_Set()
+    print('len(X): ', len(X))
 
-    clf = svm.SVC(kernel='linear',C=1.0)
-    clf.fit(X,y)
+    clf = svm.SVC(kernel='linear', C=1.0)
+    clf.fit(X[:-test_size], y[:-test_size])
+
+    correct_count = 0
+
+    for x in range(1, test_size + 1):
+        if y[-x] == clf.predict(X[-x])[0]:
+            correct_count += 1
+    print('Accuracy: %', (correct_count / test_size) * 100.0)
+
+def Randomizing(df):
+    df2 = df.reindex(np.random.permutation(df.index))
+    return df2
+
+data_df = pd.DataFrame.from_csv("key_stats.csv")
+Randomizing(data_df)
+
+
+def Analysis2():
+    X, y = Build_Data_Set()
+
+    clf = svm.SVC(kernel='linear', C=1.0)
+    clf.fit(X, y)
 
     w = clf.coef_[0]
     a = -w[0] / w[1]
@@ -294,7 +273,51 @@ def Analysis():
 
     plt.show()
 
-Analysis()
 
+def debug_run():
+    gather = "Total Debt/Equity (mrq)"
 
+    statspath = path + '/_KeyStats'
+    print(os.walk(statspath))
+    # x is a tuple so foreach element x in os.walk(),
+    # take the first tuple element
+    stock_list = [x[0] for x in os.walk(statspath)]
+    print('stock_list: ', stock_list)
 
+    # file structure
+    # /Users/tomiwa/Downloads/intraQuarter
+    # |_ KeyStats
+    #     |_ aapl
+    #         |_ 20040130190102.html
+    for each_dir in stock_list[1:]:
+        each_file = os.listdir(each_dir)
+        ticker = each_dir.split("/")[1]
+        if len(each_file) > 0:
+            for file in each_file:
+                date_stamp = datetime.strptime(file, '%Y%m%d%H%M%S.html')
+                unix_time = time.mktime(date_stamp.timetuple())
+                print(date_stamp, unix_time)
+                full_file_path = each_dir + '/' + file
+                print('full_file_path: ', full_file_path)
+                source = open(full_file_path, 'r').read()
+                print('source: ', source)
+                value = source.split(gather + ':</td><td class="yfnc_tabledata1">')[1].split('</td>')[0]
+                print(ticker + ":", value)
+                time.sleep(15)
+
+'''
+Each directory in keystats is a stock ticker.
+Each stock ticker, has files with date time filename 
+in the format %Y%m%d%H%M%S.html' indicating when 
+the data was pulled
+We want to convert those file names into unix time stamps.
+
+This function is useful for teaching how to scrape data from a webpage
+'''
+
+'''
+1. Go through the HTMl of each stock at quarterly intervals and get their DE Ratio
+2. Get the s&p500 index csv, conver it to a datafram and match up the stock price on that day
+3. With the share price and DE Ratio for that stock on the given day
+'''
+Key_Stats()
