@@ -1,2 +1,5 @@
 my_keys.py
 stock_prices_big.csv
+*.pyc
+.DS_Store
+
