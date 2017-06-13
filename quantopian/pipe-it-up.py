@@ -1,5 +1,8 @@
 """
 This is a template algorithm on Quantopian for you to adapt and fill in.
+Note: This algorithm was backtested with $100k initial capital, as opposed to the
+regular $1m because some of the shares were small cap stocks that were thinly traded
+and thus many of their orders were only partially filled when trading with
 """
 
 

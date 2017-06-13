@@ -180,7 +180,7 @@ def Key_Stats(gather=my_gather):
                         pass
 
                     else:
-                        try:
+                        try: # we could have normalized the data before putting in a dataframe
                             df = df.append({'Date': date_stamp,
                                         'Unix': unix_time,
                                         'Ticker': ticker,
