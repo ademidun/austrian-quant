@@ -57,7 +57,7 @@ def execute_trade(context,data):
         if stock not in context.portfolio.positions:
             if purchase_value < cash: 
                 try:
-                    order_target_value(stock, purchase_value)#does context.portfolio.cash not get updated?
+                    order_target_value(stock, purchase_value) # does context.portfolio.cash not get updated?
                     # why not use that? instead of updating cash manualy
                     cash -= purchase_value
                     if stock in context.stocks_sold:
