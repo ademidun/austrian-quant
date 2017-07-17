@@ -1,22 +1,15 @@
 PSEUDOCODE
-# todo read and do the following tutorials
-# https://www.quantopian.com/posts/simple-machine-learning-example
-# 1. https://www.quantopian.com/tutorials/pipeline
-# 2. https://www.quantopian.com/posts/machine-learning-on-quantopian (do parts 1-3)
-# 3. https://www.quantopian.com/posts/simple-machine-learning-example
+
 run this function once a year:
 
 def value_find():
 
 	for stock in sp500[1:500]:
 		""" Turn each stock in the SP 500 into a feature set using financial metrics from Morning star"""
-		# input data should be randomized to prevent over learning a particular segment
-
 		X = X.append(get_features(stock))
 		y = y.append(get_performance(stock))
 
 	# todo use ensemble method add more classifiers, 4 classifiers in total should be used.
-	X = X.preprocessing.scale(X)
 	clf = RandomForestClassifier()
 	clf.learn(X,y)
 

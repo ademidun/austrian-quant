@@ -14,7 +14,7 @@ def initialize(context):
 
     
     my_pipe = make_pipeline()
-    attach_pipeline(my_pipe, 'my_pipeline')
+    attach_pipeline(my_pipe, 'my_pipeline') # returns a datafram object
     
 def make_pipeline():
     """
@@ -55,6 +55,7 @@ def my_compute_weights(context):
     Compute ordering weights.
     """
     # Compute even target weights for our long positions and short positions.
+    # swapping the weights makes a big performance difference!
     long_weight = 0.5 / len(context.longs)
     short_weight = -0.5 / len(context.shorts)
 
@@ -65,16 +66,12 @@ def before_trading_start(context, data):
     context.output = pipeline_output('my_pipeline')
 
     # Go long in securities for which the 'longs' value is True.
-    # Select rows where the 'longs' column is true
     context.longs = context.output[context.output['longs']].index.tolist()
 
     # Go short in securities for which the 'shorts' value is True.
     context.shorts = context.output[context.output['shorts']].index.tolist()
     
     context.long_weight, context.short_weight = my_compute_weights(context)
-    
-    print ('context.output.head()', context.output.head())
-    print ('context.longs', context.longs)
         
         
 def my_rebalance(context, data):

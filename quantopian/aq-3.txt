@@ -1,0 +1,15 @@
+1. Schedule value_find to run once a year (once every 6 months?)
+
+inside value_find()
+1. Get a list of sp500 stocks and add it to context
+2. Get MorningStar metrics for each stock (DE ratio, cash/share, etc.), turn it into a feature list
+3. Compare stock 1yr price change % to sp500 1yr price change %
+	if stock% > sp500%, label as a buy
+
+4. Create classifiers to learn from model 
+
+5. Predict wether to buy top 250 stocks based on classifiers
+	order the predictions starting with the highest probability buy
+	if current stocks are not in the top 10 list, sell them
+
+
