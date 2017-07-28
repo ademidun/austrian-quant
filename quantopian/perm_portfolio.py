@@ -1,7 +1,7 @@
 import numpy as np
 import scipy
 
-
+# Inspired by Georges Bilan's algorithm posted on Quantopian.
 # https://www.quantopian.com/posts/risk-parity-slash-slash-all-weather-portfolio
 
 def initialize(context):
