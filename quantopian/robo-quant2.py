@@ -1,94 +1,110 @@
-"""
-This is a template algorithm on Quantopian for you to adapt and fill in.
-"""
-from quantopian.algorithm import attach_pipeline, pipeline_output
 from quantopian.pipeline import Pipeline
+from quantopian.algorithm import attach_pipeline, pipeline_output
 from quantopian.pipeline.data.builtin import USEquityPricing
-from quantopian.pipeline.factors import AverageDollarVolume
+from quantopian.pipeline.factors import SimpleMovingAverage
 from quantopian.pipeline.filters.morningstar import Q1500US
 
-from sklearn.linear_model import LogisticRegression
-from sklearn.svm import SVC, LinearSVC, NuSVC
-from sklearn.ensemble import RandomForestClassifier
-from sklearn import preprocessing
-from collections import Counter
-import numpy as np
- 
-def initialize(context):
-    """
-    Called once at the start of the algorithm.
-    """   
-    # Rebalance every day, 1 hour after market open.
-    schedule_function(my_rebalance, date_rules.every_day(), time_rules.market_open(hours=1))
-     
-    # Record tracking variables at the end of each day.
-    schedule_function(my_record_vars, date_rules.every_day(), time_rules.market_close())
-     
-    # Create our dynamic stock selector.
-    attach_pipeline(make_pipeline(), 'my_pipeline')
 
-    context.stocks = symbols('XLY',  # XLY Consumer Discrectionary SPDR Fund   
-                       'XLF',  # XLF Financial SPDR Fund  
-                       'XLK',  # XLK Technology SPDR Fund  
-                       'XLE',  # XLE Energy SPDR Fund  
-                       'XLV',  # XLV Health Care SPRD Fund  
-                       'XLI',  # XLI Industrial SPDR Fund  
-                       'XLP',  # XLP Consumer Staples SPDR Fund   
-                       'XLB',  # XLB Materials SPDR Fund  
-                       'XLU')  # XLU Utilities SPRD Fund
+def initialize(context):
+    # Schedule our rebalance function to run at the start of each week.
+    schedule_function(my_rebalance, date_rules.week_start(), time_rules.market_open(hours=1))
+
+    # Record variables at the end of each day.
+    schedule_function(my_record_vars, date_rules.every_day(), time_rules.market_close())
+
     
-    context.historical_bars = 100
-    context.feature_window = 10
-         
+    my_pipe = make_pipeline()
+    attach_pipeline(my_pipe, 'my_pipeline')
+    
 def make_pipeline():
     """
-    A function to create our dynamic stock selector (pipeline). Documentation on
-    pipeline can be found here: https://www.quantopian.com/help#pipeline-title
+    Create our pipeline.
     """
-    
-    # Base universe set to the Q500US
+
+    # Base universe set to the Q1500US.
     base_universe = Q1500US()
 
-    # Factor of yesterday's close price.
-    yesterday_close = USEquityPricing.close.latest
-     
-    pipe = Pipeline(
-        screen = base_universe,
-        columns = {
-            'close': yesterday_close,
-        }
+    # 10-day close price average.
+    mean_10 = SimpleMovingAverage(inputs=[USEquityPricing.close], window_length=10, mask=base_universe)
+
+    # 30-day close price average.
+    mean_30 = SimpleMovingAverage(inputs=[USEquityPricing.close], window_length=30, mask=base_universe)
+
+    percent_difference = (mean_10 - mean_30) / mean_30
+
+    # Filter to select securities to short.
+    shorts = percent_difference.top(25)
+
+    # Filter to select securities to long.
+    longs = percent_difference.bottom(25)
+
+    # Filter for all securities that we want to trade.
+    securities_to_trade = (shorts | longs)
+
+    return Pipeline(
+        columns={
+            'longs': longs,
+            'shorts': shorts
+        },
+        screen=(securities_to_trade),
     )
-    return pipe
- 
+
+
+def my_compute_weights(context):
+    """
+    Compute ordering weights.
+    """
+    # Compute even target weights for our long positions and short positions.
+    long_weight = 0.5 / len(context.longs)
+    short_weight = -0.5 / len(context.shorts)
+
+    return long_weight, short_weight
+
 def before_trading_start(context, data):
-    """
-    Called every day before market open.
-    """
+    # Gets our pipeline output every day.
     context.output = pipeline_output('my_pipeline')
-  
-    # These are the securities that we are interested in trading each day.
-    context.security_list = context.output.index
-     
-def my_assign_weights(context, data):
+
+    # Go long in securities for which the 'longs' value is True.
+    # Select rows where the 'longs' column is true
+    context.longs = context.output[context.output['longs']].index.tolist()
+
+    # Go short in securities for which the 'shorts' value is True.
+    context.shorts = context.output[context.output['shorts']].index.tolist()
+    
+    context.long_weight, context.short_weight = my_compute_weights(context)
+    
+    print ('context.output.head()', context.output.head())
+    print ('context.longs', context.longs)
+        
+        
+def my_rebalance(context, data):
     """
-    Assign weights to securities that we want to order.
+    Rebalance weekly.
     """
-    pass
- 
-def my_rebalance(context,data):
-    """
-    Execute orders according to our schedule_function() timing. 
-    """
-    pass
- 
+    for security in context.portfolio.positions:
+        if security not in context.longs and security not in context.shorts and data.can_trade(security):
+            order_target_percent(security, 0)
+
+    for security in context.longs:
+        if data.can_trade(security):
+            order_target_percent(security, context.long_weight)
+
+    for security in context.shorts:
+        if data.can_trade(security):
+            order_target_percent(security, context.short_weight)
+    
+    
 def my_record_vars(context, data):
     """
-    Plot variables at the end of each day.
+    Record variables at the end of each day.
     """
-    pass
- 
-def handle_data(context,data):
-    """
-    Called every minute.
-    """
-    pass
+    longs = shorts = 0
+    for position in context.portfolio.positions.itervalues():
+        if position.amount > 0:
+            longs += 1
+        elif position.amount < 0:
+            shorts += 1
+
+    # Record our variables.
+    record(leverage=context.account.leverage, long_count=longs, short_count=shorts)        
+        

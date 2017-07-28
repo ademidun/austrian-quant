@@ -3,6 +3,11 @@ from sklearn.cluster import MeanShift
 from sklearn.datasets.samples_generator import make_blobs
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+import matplotlib as mpl
+import re
+
+mpl.use('TkAgg')
+
 from matplotlib import style
 style.use("ggplot")
 

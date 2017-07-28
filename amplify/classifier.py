@@ -1,51 +1,29 @@
 import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib import style
-import warnings
-from collections import Counter
-#dont forget this
+from sklearn import preprocessing, cross_validation, neighbors
 import pandas as pd
-import random
-style.use('fivethirtyeight')
-
-def k_nearest_neighbors(data, predict, k=3):
-    if len(data) >= k:
-        warnings.warn('K is set to a value less than total voting groups!')
-    distances = []
-    for group in data:
-        for features in data[group]:
-            euclidean_distance = np.linalg.norm(np.array(features)-np.array(predict))
-            distances.append([euclidean_distance,group])
-    votes = [i[1] for i in sorted(distances)[:k]]
-    vote_result = Counter(votes).most_common(1)[0][0]
-    return vote_result
 
 df = pd.read_csv('breast-cancer-wisconsin.data.txt')
 df.replace('?',-99999, inplace=True)
 df.drop(['id'], 1, inplace=True)
-full_data = df.astype(float).values.tolist()
 
-random.shuffle(full_data)
+X = np.array(df.drop(['class'], 1))
+y = np.array(df['class'])
 
-test_size = 0.2
-train_set = {2:[], 4:[]}
-test_set = {2:[], 4:[]}
-train_data = full_data[:-int(test_size*len(full_data))]
-test_data = full_data[-int(test_size*len(full_data)):]
+X_train, X_test, y_train, y_test = cross_validation.train_test_split(X, y, test_size=0.2)
 
-for i in train_data:
-    train_set[i[-1]].append(i[:-1])
+clf = neighbors.KNeighborsClassifier()
+clf.fit(X_train, y_train)
 
-for i in test_data:
-    test_set[i[-1]].append(i[:-1])
+# with open('classifier.pickle','wb') as f:
+#     pickle.dump(clf, f)
 
-correct = 0
-total = 0
+# pickle_in = open('linearregression.pickle','rb')
+# clf = pickle.load(pickle_in)
 
-for group in test_set:
-    for data in test_set[group]:
-        vote = k_nearest_neighbors(train_set, data, k=5)
-        if group == vote:
-            correct += 1
-        total += 1
-print('Accuracy:', correct/total)
+accuracy = clf.score(X_test, y_test)
+print(accuracy)
+
+example_measures = np.array([10,10,10,8,6,1,8,9,1,]) # line 38
+example_measures = example_measures.reshape(1, -1)
+prediction = clf.predict(example_measures)
+print(prediction)

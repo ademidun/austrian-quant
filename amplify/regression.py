@@ -1,4 +1,4 @@
-import Quandl, math
+import quandl, math
 import numpy as np
 import pandas as pd
 from sklearn import preprocessing, cross_validation, svm
@@ -10,7 +10,7 @@ import pickle
 
 style.use('ggplot')
 
-df = Quandl.get("WIKI/GOOGL")
+df = quandl.get("WIKI/GOOGL")
 df = df[['Adj. Open',  'Adj. High',  'Adj. Low',  'Adj. Close', 'Adj. Volume']]
 df['HL_PCT'] = (df['Adj. High'] - df['Adj. Low']) / df['Adj. Close'] * 100.0
 df['PCT_change'] = (df['Adj. Close'] - df['Adj. Open']) / df['Adj. Open'] * 100.0
@@ -32,11 +32,16 @@ df.dropna(inplace=True)
 y = np.array(df['label'])
 
 X_train, X_test, y_train, y_test = cross_validation.train_test_split(X, y, test_size=0.2)
-#COMMENTED OUT:
-##clf = svm.SVR(kernel='linear')
-##clf.fit(X_train, y_train)
-##confidence = clf.score(X_test, y_test)
-##print(confidence)
+
+
+clf = svm.SVR(kernel='linear')
+clf.fit(X_train, y_train)
+confidence = clf.score(X_test, y_test)
+print('confidence: ',confidence)
+
+with open('linearregression.pickle','wb') as f:
+    pickle.dump(clf, f)
+
 pickle_in = open('linearregression.pickle','rb')
 clf = pickle.load(pickle_in)
 

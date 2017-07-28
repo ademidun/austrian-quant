@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b4a3351-09bf-4fa7-8c56-3d608265edc3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/austrian-quant-2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/quantopian/all-weather.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/quantopian/austrian-quant-1.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/austrian-quant-3-pseudo.py" afterPath="$PROJECT_DIR$/austrian-quant-3-pseudo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quantopian/robo-quant.py" afterPath="$PROJECT_DIR$/quantopian/robo-quant.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/amplify/classifier.py" afterPath="$PROJECT_DIR$/amplify/classifier.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/amplify/h_clustering.py" afterPath="$PROJECT_DIR$/amplify/h_clustering.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/amplify/regression.py" afterPath="$PROJECT_DIR$/amplify/regression.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,8 +38,8 @@
       <file leaf-file-name="quant2b.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quant2b.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="e#323#1366#0" expanded="false" />
                 <element signature="e#323#456#1" expanded="false" />
@@ -53,60 +55,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="all-weather.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/quantopian/all-weather.py">
+      <file leaf-file-name="quant2b.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quantopian/quant2b.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="211">
+              <caret line="120" column="21" lean-forward="true" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
               <folding>
-                <element signature="e#497#631#0" expanded="false" />
-                <element signature="e#821#1179#0" expanded="false" />
-                <element signature="e#1012#1133#0" expanded="false" />
-                <element signature="e#1221#2905#0" expanded="false" />
-                <element signature="e#1721#1796#0" expanded="false" />
-                <element signature="e#2087#2311#0" expanded="false" />
-                <element signature="e#2938#3049#0" expanded="false" />
-                <element signature="e#3052#3137#0" expanded="false" />
-                <element signature="e#3235#3616#0" expanded="false" />
-                <element signature="e#3527#3600#0" expanded="false" />
+                <element signature="e#0#24#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="austrian-quant-1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quantopian/austrian-quant-1.py">
+      <file leaf-file-name="robo-quant2.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/quantopian/robo-quant2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="88" column="62" lean-forward="false" selection-start-line="88" selection-start-column="62" selection-end-line="88" selection-end-column="62" />
-              <folding>
-                <element signature="e#2404#2707#0" expanded="false" />
-                <element signature="e#2746#3104#0" expanded="false" />
-                <element signature="e#2937#3058#0" expanded="false" />
-                <element signature="e#4012#4236#0" expanded="false" />
-                <element signature="e#4867#4942#1" expanded="false" />
-                <element signature="e#5140#10831#0" expanded="false" />
-                <element signature="e#5158#10773#0" expanded="false" />
-                <element signature="e#5674#6083#1" expanded="false" />
-                <element signature="e#6145#7455#0" expanded="false" />
-                <element signature="e#6171#7330#0" expanded="false" />
-                <element signature="e#6443#6629#0" expanded="false" />
-                <element signature="e#6848#6896#0" expanded="false" />
-                <element signature="e#7391#7455#0" expanded="false" />
-                <element signature="e#7839#7876#0" expanded="false" />
-                <element signature="e#8056#8113#0" expanded="false" />
-                <element signature="e#8336#8370#0" expanded="false" />
-                <element signature="e#9119#9189#0" expanded="false" />
-                <element signature="e#9582#9621#0" expanded="false" />
-                <element signature="e#10295#10367#0" expanded="false" />
-                <element signature="e#10607#10773#0" expanded="false" />
-                <element signature="e#10685#10718#0" expanded="false" />
-                <element signature="e#10974#11224#0" expanded="false" />
-                <element signature="e#11255#11366#0" expanded="false" />
-                <element signature="e#11369#11454#0" expanded="false" />
-                <element signature="e#11552#11933#0" expanded="false" />
-                <element signature="e#11844#11917#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="-565">
+              <caret line="10" column="40" lean-forward="false" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -114,8 +80,28 @@
       <file leaf-file-name="pipe-it-up.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quantopian/pipe-it-up.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="252">
+              <caret line="64" column="23" lean-forward="true" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/env/lib/python3.6/site-packages/sklearn/preprocessing/data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="438" column="13" lean-forward="false" selection-start-line="438" selection-start-column="13" selection-end-line="438" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="quant1.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quant1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="238" column="7" lean-forward="false" selection-start-line="238" selection-start-column="7" selection-end-line="238" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -132,8 +118,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>print(</find>
-      <find>re</find>
       <find>fapsd</find>
       <find>%Y-%m-%d</find>
       <find>n/a</find>
@@ -148,10 +132,26 @@
       <find>record('L</find>
       <find>record('</find>
       <find>tutorial</find>
-      <find>.</find>
       <find>.fiit</find>
+      <find>matpl</find>
+      <find>matplotlib</find>
+      <find>m</find>
+      <find>s</find>
+      <find>skle</find>
+      <find>sklearn</find>
+      <find>.</find>
+      <find>.f</find>
+      <find>.fi</find>
       <find>.fit</find>
+      <find>LogisticRegression</find>
+      <find>time.</find>
+      <find>.predic</find>
+      <find>NuSVC</find>
+      <find>kern</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -175,6 +175,7 @@
         <option value="$PROJECT_DIR$/quantopian/austrian-quant-1.py" />
         <option value="$PROJECT_DIR$/austrian-quant-2.py" />
         <option value="$PROJECT_DIR$/austrian-quant-3.py" />
+        <option value="$PROJECT_DIR$/quantopian/quant2b.py" />
       </list>
     </option>
   </component>
@@ -185,8 +186,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="676" />
-    <option name="y" value="23" />
+    <option name="x" value="697" />
+    <option name="y" value="28" />
     <option name="width" value="763" />
     <option name="height" value="812" />
   </component>
@@ -205,6 +206,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -219,7 +221,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -458,18 +459,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="676" y="23" width="763" height="812" extended-state="0" />
+    <frame x="697" y="28" width="763" height="812" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2718708" sideWeight="0.5" order="11" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40686923" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2718708" sideWeight="0.5" order="11" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936507" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -478,7 +480,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936507" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -495,35 +496,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/my_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#12#1093#0" expanded="false" />
-            <element signature="e#3998#5036#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quant2b.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="75" column="17" lean-forward="false" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
-          <folding>
-            <element signature="e#323#1366#0" expanded="false" />
-            <element signature="e#323#456#1" expanded="false" />
-            <element signature="e#1468#2209#0" expanded="false" />
-            <element signature="e#2233#3587#0" expanded="false" />
-            <element signature="e#2531#2972#0" expanded="false" />
-            <element signature="e#2723#2972#0" expanded="false" />
-            <element signature="e#3612#4076#0" expanded="false" />
-            <element signature="e#3690#3760#0" expanded="false" />
-            <element signature="e#3941#4017#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quant2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
@@ -797,13 +769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quant1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="83" column="70" lean-forward="false" selection-start-line="83" selection-start-column="70" selection-end-line="83" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quant3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
@@ -832,39 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quantopian/robo-quant2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-833">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quantopian/pipe-it-up.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quant2b.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-          <folding>
-            <element signature="e#323#1366#0" expanded="false" />
-            <element signature="e#323#456#1" expanded="false" />
-            <element signature="e#1468#2209#0" expanded="false" />
-            <element signature="e#2233#3587#0" expanded="false" />
-            <element signature="e#2531#2972#0" expanded="false" />
-            <element signature="e#2723#2972#0" expanded="false" />
-            <element signature="e#3612#4076#0" expanded="false" />
-            <element signature="e#3690#3760#0" expanded="false" />
-            <element signature="e#3941#4017#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -885,57 +817,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quantopian/austrian-quant-1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="88" column="62" lean-forward="false" selection-start-line="88" selection-start-column="62" selection-end-line="88" selection-end-column="62" />
-          <folding>
-            <element signature="e#2404#2707#0" expanded="false" />
-            <element signature="e#2746#3104#0" expanded="false" />
-            <element signature="e#2937#3058#0" expanded="false" />
-            <element signature="e#4012#4236#0" expanded="false" />
-            <element signature="e#4867#4942#1" expanded="false" />
-            <element signature="e#5140#10831#0" expanded="false" />
-            <element signature="e#5158#10773#0" expanded="false" />
-            <element signature="e#5674#6083#1" expanded="false" />
-            <element signature="e#6145#7455#0" expanded="false" />
-            <element signature="e#6171#7330#0" expanded="false" />
-            <element signature="e#6443#6629#0" expanded="false" />
-            <element signature="e#6848#6896#0" expanded="false" />
-            <element signature="e#7391#7455#0" expanded="false" />
-            <element signature="e#7839#7876#0" expanded="false" />
-            <element signature="e#8056#8113#0" expanded="false" />
-            <element signature="e#8336#8370#0" expanded="false" />
-            <element signature="e#9119#9189#0" expanded="false" />
-            <element signature="e#9582#9621#0" expanded="false" />
-            <element signature="e#10295#10367#0" expanded="false" />
-            <element signature="e#10607#10773#0" expanded="false" />
-            <element signature="e#10685#10718#0" expanded="false" />
-            <element signature="e#10974#11224#0" expanded="false" />
-            <element signature="e#11255#11366#0" expanded="false" />
-            <element signature="e#11369#11454#0" expanded="false" />
-            <element signature="e#11552#11933#0" expanded="false" />
-            <element signature="e#11844#11917#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quantopian/all-weather.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quantopian/austrian-quant-1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="35" column="67" lean-forward="false" selection-start-line="35" selection-start-column="67" selection-end-line="35" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quantopian/pipe-it-up.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="64" column="23" lean-forward="true" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env/lib/python3.6/site-packages/sklearn/preprocessing/data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="438" column="13" lean-forward="false" selection-start-line="438" selection-start-column="13" selection-end-line="438" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="238" column="7" lean-forward="false" selection-start-line="238" selection-start-column="7" selection-end-line="238" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quant2b.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
-            <element signature="e#497#631#0" expanded="false" />
-            <element signature="e#821#1179#0" expanded="false" />
-            <element signature="e#1012#1133#0" expanded="false" />
-            <element signature="e#1221#2905#0" expanded="false" />
-            <element signature="e#1721#1796#0" expanded="false" />
-            <element signature="e#2087#2311#0" expanded="false" />
-            <element signature="e#2938#3049#0" expanded="false" />
-            <element signature="e#3052#3137#0" expanded="false" />
-            <element signature="e#3235#3616#0" expanded="false" />
-            <element signature="e#3527#3600#0" expanded="false" />
+            <element signature="e#323#1366#0" expanded="false" />
+            <element signature="e#323#456#1" expanded="false" />
+            <element signature="e#1468#2209#0" expanded="false" />
+            <element signature="e#2233#3587#0" expanded="false" />
+            <element signature="e#2531#2972#0" expanded="false" />
+            <element signature="e#2723#2972#0" expanded="false" />
+            <element signature="e#3612#4076#0" expanded="false" />
+            <element signature="e#3690#3760#0" expanded="false" />
+            <element signature="e#3941#4017#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quantopian/quant2b.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="120" column="21" lean-forward="true" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quantopian/robo-quant2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-565">
+          <caret line="10" column="40" lean-forward="false" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
