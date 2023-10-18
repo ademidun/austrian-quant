@@ -1,8 +1,8 @@
 import numpy as np
 import scipy
 
-# Inspired by Georges Bilan's algorithm posted on Quantopian.
-# https://www.quantopian.com/posts/risk-parity-slash-slash-all-weather-portfolio
+# Inspired by the Risk Parity/All Weather Portfolio posted on Quantopian.
+# https://web.archive.org/web/20181104052320/https://www.quantopian.com/posts/risk-parity-slash-slash-all-weather-portfolio
 
 def initialize(context):
     schedule_function(func=perm_portfolio, date_rule=date_rules.week_start(days_offset=0),
